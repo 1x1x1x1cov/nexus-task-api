@@ -11,8 +11,8 @@ export default registerAs(
     password: process.env.DATABASE_PASSWORD || 'postgres',
     database: process.env.DATABASE_NAME || 'nexustask',
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-    synchronize: process.env.NODE_ENV === 'development',
-    logging: process.env.NODE_ENV === 'development',
+    synchronize: true,
+    logging: true,
     autoLoadEntities: true,
   }),
 );
